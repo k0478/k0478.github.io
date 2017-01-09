@@ -132,36 +132,90 @@ table {
 
 <body>
 <script>
-var teams = new Array(12);
-teams[0]="周怡仰、吳展宇";
-teams[1]="林暐涵、陳信吉、盧奕翔";
-teams[2]="林韻如、李維倫";
-teams[3]="洪振傑、翁柏丞";
-teams[4]="陳奕翔、吳俊頡、郭泰偉";
-teams[5]="陳昱廷、何建輝";
-teams[6]="陳容萱、李宜芳、王湘慈";
-teams[7]="黃彥愷、游松叡";
-teams[8]="黃軍翰、康予騰、謝秉勳";
-teams[9]="蔡柏彥、楊泊諺";
-teams[10]="翁國睿、鄭文景、鄭怡君";
-teams[11]="宋紘麒、鄭孝宇";
+function setTeam1() {
+var team1 = new Array(12);
+team1[0]="周怡仰、吳展宇";
+team1[1]="林暐涵、陳信吉、盧奕翔";
+team1[2]="林韻如、李維倫";
+team1[3]="洪振傑、翁柏丞";
+team1[4]="陳奕翔、吳俊頡、郭泰偉";
+team1[5]="陳昱廷、何建輝";
+team1[6]="陳容萱、李宜芳、王湘慈";
+team1[7]="黃彥愷、游松叡";
+team1[8]="黃軍翰、康予騰、謝秉勳";
+team1[9]="蔡柏彥、楊泊諺";
+team1[10]="翁國睿、鄭文景、鄭怡君";
+team1[11]="宋紘麒、鄭孝宇";
+showTeams(team1);
+}
+
+function setTeam2() {
+var team2 = new Array(16);
+team2[0]="朱晟瑋、黃于珊、丁子容";
+team2[1]="朱諺群、劉嘉勛、江維明";
+team2[2]="何冠頤、張智翔、利易樺";
+team2[3]="李廷夆、鄭安家、陳建錩";
+team2[4]="李沅樺、許誠育、楊智凱";
+team2[5]="高子翔、陳慶光";
+team2[6]="張祐誠、葉安哲、妙樺羅外";
+team2[7]="張詠淳、陳燕翔、葉宗翰";
+team2[8]="陳彥辰、吳翊民";
+team2[9]="黃俊翰、陳緯辰、柯均霖";
+team2[10]="黃俞嘉、許竣喬、陳俊森";
+team2[11]="黃鈺鈞、陳壯沅、李冠霖";
+team2[12]="楊傑程、洪宇宸";
+team2[13]="劉承晏、劉彥佶、王曜銘";
+team2[14]="劉哲男、許子敬、盧唯茹";
+team2[15]="林易寬、許正岱";
+showTeams(team2);
+}
+
+function setTeam3() {
+var team3 = new Array(18);
+team3[0]="王倉遠、方世偉";
+team3[1]="石振寬、陳峻淇、蘇豐鍵";
+team3[2]="陳韋仲、沈家和、林廷翰";
+team3[3]="林秉豪、鍾國洲、蕭宇俊";
+team3[4]="陳銘洋、林進財、陳沺潾";
+team3[5]="張崴成、王俊棋、侯鴻生";
+team3[6]="洪世彬、龔柏逢、袁瑞炎";
+team3[7]="孫大智、周俊義、徐維佑";
+team3[8]="蔡易辰、高子昂、柯建安";
+team3[9]="莊閔翔、王仕達、王國暉";
+team3[10]="陳韋均、陳嘉祥、薛義郎";
+team3[11]="李思賢、賴昱鋒、黃正耀";
+team3[12]="嚴柏翰、陳映宇、黃翔毓";
+team3[13]="黃鈺翰、李承鴻";
+team3[14]="廖健智、蔡宗曄、李建潤";
+team3[15]="劉子豪、吳政陽、王甫元";
+team3[16]="蔡佳辰、蔡承穎、李丞偉";
+team3[17]="顏銘賢、吳冠慶、柯冠宇";
+showTeams(team3);
+}
+
+
 
 </script>
 <div class="container">
   <div class="sidebar1">
     <ul class="nav">
+			<li><a href="#" onclick="setTeam1()">資工三乙</a></li>
+			<li><a href="#" onclick="setTeam2()">資工二甲</a></li>
+			<li><a href="#" onclick="setTeam3()">資工二乙</a></li>
+			<!--
       <li><a href="#" onclick="showTeams()">產生順序</a></li>
       <li><a href="#">重置</a></li>
+  		-->
     </ul>
     <p>&nbsp;</p>
     <!-- end .sidebar1 --></div>
   <div class="content">
-    <h1>網頁程式設計(三)期末報告順序</h1>
+    <h1>網頁程式設計期末報告順序</h1>
     <div id="teamTable"> </div>
     <!-- end .content --></div>
   <!-- end .container --></div>
   <script>
-  function showTeams(){
+  function showTeams(teams){
   var teamt = document.getElementById("teamTable");
   shuffle(teams);
   var str="";

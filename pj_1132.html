@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>專題報告順序</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="animate.css">
+
 <style type="text/css">
 
 <!--
@@ -135,26 +140,26 @@ table {
 function setTeam1() {
 var team1 = new Array(20);
 var member1 = new Array()
-team1[0]="PM2.5監控系統(要改)";
-team1[1]="智慧農業-自動灌溉與環境監控平台";
-team1[2]="智能灌溉系統";
-team1[3]="智能火災逃生系統";
-team1[4]="居家安全警報器";
-team1[5]="車牌辨識";
-team1[6]="借書系統";
-team1[7]="AI臉部情緒辨識";
-team1[8]="智慧多功能水族箱";
-team1[9]="智能照明系統：節能與便利性的結合";
-team1[10]="基於深度學習的YouTube中文評論情感分析：BERT模型的應用研究";
-team1[11]="實作以P2P方式搭配KCP協定的通訊軟體";
-team1[12]="智慧單詞行事曆";
-team1[13]="智慧飲食管家";
-team1[14]="基於程式邏輯解析之自動化流程圖建構系統";
-team1[15]="財務管家";
-team1[16]="股票投資模擬器";
-team1[17]="AI人像生成辯識器";
-team1[18]="醫院網站架設";
-team1[19]="非本班同學";
+team1[0]="PM2.5監控系統(要改)<br>吳柏賢、黃彥凱、李柏翰";
+team1[1]="智慧農業-自動灌溉與環境監控平台<br>林宸宇、黃莛、陳翔昇";
+team1[2]="智能灌溉系統<br>林錦安、鍾哲宇、白鋒傑";
+team1[3]="智能火災逃生系統<br>莊博恩、劉春華、莊淙崴";
+team1[4]="居家安全警報器<br>曾傳祐、顏嘉佑、秦詠峻";
+team1[5]="車牌辨識<br>莊秉翰、戴伯霖";
+team1[6]="借書系統<br>潘聖弦、蔡丞哲、黃俊傑";
+team1[7]="AI臉部情緒辨識<br>陳又賓、陳冠中";
+team1[8]="智慧多功能水族箱<br>許宏榤、潘東立、孔佑宸";
+team1[9]="智能照明系統：節能與便利性的結合<br>高源鴻、陳柏諴、吳文勝";
+team1[10]="基於深度學習的YouTube中文評論情感分析：BERT模型的應用研究<br>黃靖棋、歐靜祥、盧永洲";
+team1[11]="實作以P2P方式搭配KCP協定的通訊軟體<br>陳建宏、吳忠明";
+team1[12]="智慧單詞行事曆<br>林仕沅、蔡佳錩、陳宗檠";
+team1[13]="智慧飲食管家<br>黃韻潔、吳俊儀、孫鈺廷";
+team1[14]="基於程式邏輯解析之自動化流程圖建構系統<br>吳柏昇、陳果、謝日新";
+team1[15]="財務管家<br>邱勻誌、蔡秉學、陳彥志";
+team1[16]="股票投資模擬器<br>陳春億、黃昶琦、顏育森";
+team1[17]="AI人像生成辯識器<br>許益誠、陳柏磬";
+team1[18]="醫院網站架設<br>陳逢駿、周昱均、王詠宏";
+team1[19]="非本班同學<br>林子翔、林凱俊、許仁澤";
 showTeams(team1);
 }
 
@@ -176,26 +181,23 @@ team2[12]="劉方毓、陳昱翔";
 team2[13]="黃欽瓏、蕭吉宏";
 showTeams(team2);
 }
-
-
-
 </script>
-<div class="container">
-  <div class="sidebar1">
-    <ul class="nav">
-			<li><a href="#" onclick="setTeam1()">資工論壇</a></li>
-			<!--
-      <li><a href="#" onclick="showTeams()">產生順序</a></li>
-      <li><a href="#">重置</a></li>
-  		-->
-    </ul>
-    <p>&nbsp;</p>
-    <!-- end .sidebar1 --></div>
-  <div class="content">
-    <h1>專題報告順序</h1>
-    <div id="teamTable"> </div>
-    <!-- end .content --></div>
-  <!-- end .container --></div>
+
+<div class="container-md text-center">
+	<div class="row">
+    <div class="col-md-3">
+      <div class="list-group">
+    	<ul class="nav">
+			<li><a href="#" onclick="setTeam1()"><h3>資工論壇</h3></a></li>
+    	</ul>
+		</div>
+	</div>
+
+    <div class="col-md-9">
+		<h1>專題報告順序</h1>
+		<h4>
+    	<div id="teamTable"> </div>
+		</h4>
   <script>
   function showTeams(teams){
   var teamt = document.getElementById("teamTable");
@@ -224,5 +226,6 @@ function shuffle (array) {
 }
 
   </script>
-</body>
+
+  </body>
 </html>
